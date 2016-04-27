@@ -17,7 +17,7 @@ def send(mid, mtype, mmass):
     SOME_TIME = 2
     
     pin = ["P9_11", "P9_13"]
-    nums = ["P8_08", "P8_10", "P8_12", "P8_14"]
+    num = ["P8_08", "P8_10", "P8_12", "P8_14"]
 
     mid = getBinary(mid)
     mtype = getBinary(mtype)
@@ -82,7 +82,12 @@ def readQR():
                 if len(s) == 3:
                     # send in the following way: id, type, mass
                     send(int(s[0]), int(s[1]), int(s[2]))
+                    print "id, type, mass"
+                    print int(s[0]), int(s[1]), int(s[2])
                     print "everything is sent"
                     break
                 else:
                     print "incorrect QR code"
+
+
+readQR()
