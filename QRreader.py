@@ -7,7 +7,10 @@ import os
 def getBinary(x):
     temp = []
     for i in range(4):
-        temp.append(x % 2)
+        if x % 2 == 0:
+            temp.append(GPIO.LOW)
+        else:
+            temp.append(GPIO.HIGH)
         x /= 2
     temp.reverse()
     return temp
