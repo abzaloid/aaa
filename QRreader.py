@@ -90,4 +90,3 @@ def readQR():
                     print "incorrect QR code"
 
 
-readQR()
